@@ -2,7 +2,7 @@
 
 This is a project that seeks to extract relevant information from collected real-world e-commerce data. The data used in the research is a dataset taken from all sales transactions on the Amazon platform over four years. My goal was to deepen my understanding of this field so I could then interact with the data, visualize potential strengths and weaknesses through graphs, and then inform business decision-making through analysis of the collected data.
 
-[Software Demo Video](http://youtube.link.goes.here)
+[Software Demo Video](https://youtu.be/VEWHhXfl8OE?si=J0qNSWNU_S_x9iMG)
 
 # Data Analysis Results
 
