@@ -1,20 +1,24 @@
+# Product Analysis
+# This script will generate a report on the most profitable
+# and least profitable products in the dataset.
 
 import pandas as pd
 import matplotlib.pyplot as plt
 
-# Finally the last question was - Which products generate more (or less) profit?
-
+# Read the orders CSV file
 df = pd.read_csv('Orders.csv')
 
-# Here I proceed to obtain the data and according to the profit sort it and group it and then..
+# Group products by name and calculate the total profit for each product
+# Sort the results in descending order
 profit_by_product = df.groupby('Product Name')['Profit'].sum().sort_values(ascending=False)
 
 print(" 🔼 📈 Top 10 most profitable products:")
 print(profit_by_product.head(10))
 
-# creating a graph with the top 10 profitables product.
+
+# Extracting the top 10 most profitable products
 top_10 = profit_by_product.head(10)
-plt.figure(figsize=(10, 6)) 
+plt.figure(figsize=(10, 6))
 top_10.plot(kind='bar', color='green')
 plt.title('Most profitable products')
 plt.ylabel('Total profit')
@@ -22,7 +26,7 @@ plt.xticks(rotation=45, ha='right')
 plt.tight_layout()
 plt.show()
 
-# and the Top 10 products with least profit.
+# Show the top 10 products with the most profit
 print("\n🔻📉 Top 10 products with the most loss:")
 print(profit_by_product.tail(10))
 
